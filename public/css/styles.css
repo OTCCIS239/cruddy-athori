@@ -1,0 +1,12 @@
+/*Home page CSS */
+html, body{
+    height: 100%;
+}
+.homeContainer{
+    height: 88.5vh;
+}
+
+/*Footer CSS */
+.myFooterText{
+    color:white;
+}
