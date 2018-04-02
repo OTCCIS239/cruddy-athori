@@ -11,6 +11,12 @@
 |
 */
 
-Route::get('/', function () {
-    return view('pages.home');
-});
+// Route::get('/', function () {
+//     return view('pages.home');
+// });
+
+
+Route::resource('/', 'HomeController');
+Route::resource('artists', 'ArtistsController');
+Route::resource('events', 'EventsController');
+Route::resource('acts', 'UsersController');

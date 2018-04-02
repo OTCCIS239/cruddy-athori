@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Acts;
+use App\Home;
 use Illuminate\Http\Request;
 
-class ActsController extends Controller
+class HomeController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class ActsController extends Controller
      */
     public function index()
     {
-        //
+        return view('home.index');
     }
 
     /**
@@ -41,10 +41,10 @@ class ActsController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Acts  $acts
+     * @param  \App\Home  $home
      * @return \Illuminate\Http\Response
      */
-    public function show(Acts $acts)
+    public function show(Home $home)
     {
         //
     }
@@ -52,10 +52,10 @@ class ActsController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Acts  $acts
+     * @param  \App\Home  $home
      * @return \Illuminate\Http\Response
      */
-    public function edit(Acts $acts)
+    public function edit(Home $home)
     {
         //
     }
@@ -64,10 +64,10 @@ class ActsController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Acts  $acts
+     * @param  \App\Home  $home
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Acts $acts)
+    public function update(Request $request, Home $home)
     {
         //
     }
@@ -75,10 +75,10 @@ class ActsController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Acts  $acts
+     * @param  \App\Home  $home
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Acts $acts)
+    public function destroy(Home $home)
     {
         //
     }

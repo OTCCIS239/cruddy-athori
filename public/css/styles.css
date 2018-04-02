@@ -6,6 +6,14 @@ html, body{
     height: 88.5vh;
 }
 
+/* Artists page CSS*/
+.artistsContainer{
+    height: 88.5vh;
+}
+.artistsContainer h1{
+    text-align: center;
+}
+
 /*Footer CSS */
 .myFooterText{
     color:white;
