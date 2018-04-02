@@ -14,7 +14,7 @@ class VenuesController extends Controller
      */
     public function index()
     {
-        //
+        return view('venues.index');
     }
 
     /**

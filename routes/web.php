@@ -19,4 +19,5 @@
 Route::resource('/', 'HomeController');
 Route::resource('artists', 'ArtistsController');
 Route::resource('events', 'EventsController');
-Route::resource('acts', 'UsersController');
+Route::resource('users', 'UsersController');
+Route::resource('venues', 'VenuesController');
