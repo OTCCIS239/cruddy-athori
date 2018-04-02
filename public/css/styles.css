@@ -14,6 +14,22 @@ html, body{
     text-align: center;
 }
 
+/*Users page CSS*/
+.usersContainer{
+    height: 88.5vh;
+}
+.usersContainer h1{
+    text-align: center;
+}
+
+/*Venues page CSS*/
+.venuesContainer{
+    height: 88.5vh;
+}
+.venuesContainer{
+    text-align: center;
+}
+
 /*Footer CSS */
 .myFooterText{
     color:white;
