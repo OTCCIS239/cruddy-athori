@@ -14,8 +14,14 @@
 // Route::get('/', function () {
 //     return view('pages.home');
 // });
+// Route::get('/', 'HomeControlle'(){
+//     return view('/');
+// })->name('home');
 
 
+// Route:get('/', function(){
+//     return view('/');
+// })->name('home');
 Route::resource('/', 'HomeController');
 Route::resource('artists', 'ArtistsController');
 Route::resource('events', 'EventsController');
