@@ -18,11 +18,10 @@
 //     return view('/');
 // })->name('home');
 
-
-// Route:get('/', function(){
-//     return view('/');
-// })->name('home');
-Route::resource('/', 'HomeController');
+Route::get('/', function(){
+    return view('home.index');
+})->name('home');
+// Route::resource('/', 'HomeController');
 Route::resource('artists', 'ArtistsController');
 Route::resource('events', 'EventsController');
 Route::resource('users', 'UsersController');

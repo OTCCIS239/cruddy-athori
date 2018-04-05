@@ -34,3 +34,8 @@ html, body{
 .myFooterText{
     color:white;
 }
+/*Nav CSS */
+a.text-dark:focus, a.text-dark:hover{
+    color:#007bff !important;
+  }
+  
