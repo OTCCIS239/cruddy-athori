@@ -10,6 +10,7 @@
                     <th scope="col">Username</th>
                     <th scope="col">First Name</th>
                     <th scope="col">Last Name</th>
+                    <th></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -18,6 +19,7 @@
                         <td>ausername</td>
                         <td>John</td>
                         <td>Doe</td>
+                        <td><a href="">View Info</a></td>
                     </tr>
                 </tbody>
             </table>

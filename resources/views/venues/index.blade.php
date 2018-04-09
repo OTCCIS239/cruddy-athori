@@ -10,6 +10,7 @@
                     <th scope="col">Venue Name</th>
                     <th scope="col">misc info</th>
                     <th scope="col">misc info2</th>
+                    <th></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -18,6 +19,7 @@
                         <td>A venue</td>
                         <td>misc info k</td>
                         <td>more misc info k</td>
+                        <td><a href="">View Info</a></td>
                     </tr>
                 </tbody>
             </table>

@@ -10,6 +10,7 @@
                     <th scope="col">Artist</th>
                     <th scope="col">Venue</th>
                     <th scope="col">Date</th>
+                    <th></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -18,6 +19,7 @@
                         <td>Some Country Act</td>
                         <td>Some venue</td>
                         <td>Some Date</td>
+                        <td><a href="">View Info</a></td>
                     </tr>
                 </tbody>
             </table>

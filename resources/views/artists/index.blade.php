@@ -10,6 +10,7 @@
                     <th scope="col">Artist</th>
                     <th scope="col">misc info</th>
                     <th scope="col">misc info</th>
+                    <th></th>
                   </tr>
                 </thead>
                 <tbody>
@@ -18,6 +19,7 @@
                         <td>Some Country Act</td>
                         <td>Someting to know</td>
                         <td>Something else to know</td>
+                        <td><a href="{{ route('artist') }}">View Info</a></td>
                     </tr>
                 </tbody>
             </table>

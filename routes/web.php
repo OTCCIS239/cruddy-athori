@@ -17,7 +17,7 @@
 // Route::get('/', 'HomeControlle'(){
 //     return view('/');
 // })->name('home');
-
+$id=1;
 Route::get('/', function(){
     return view('home.index');
 })->name('home');
@@ -27,3 +27,7 @@ Route::resource('events', 'EventsController');
 Route::resource('users', 'UsersController');
 Route::resource('venues', 'VenuesController');
 Route::resource('tickets', 'TicketsController');
+
+Route::get('artists/artist', function(){
+
+})->name('artist');

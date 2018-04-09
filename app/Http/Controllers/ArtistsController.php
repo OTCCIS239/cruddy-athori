@@ -44,9 +44,10 @@ class ArtistsController extends Controller
      * @param  \App\Artists  $artists
      * @return \Illuminate\Http\Response
      */
-    public function show(Artists $artists)
+    //public function show(Artists $artists)
+    public function show()
     {
-        //
+        return view('artists.show');
     }
 
     /**
