@@ -26,7 +26,7 @@ html, body{
 .venuesContainer{
     height: 88.5vh;
 }
-.venuesContainer{
+.venuesContainer h1{
     text-align: center;
 }
 

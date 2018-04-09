@@ -24,7 +24,7 @@ class VenuesController extends Controller
      */
     public function create()
     {
-        //
+        return view('venues.create');
     }
 
     /**

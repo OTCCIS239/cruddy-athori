@@ -3,6 +3,7 @@
         @include('layouts.nav')
         <div class="container artistsContainer">
             <h1>Event's Information</h1>
+            <a class="btn btn-primary" href="{{ route('events.create') }}">Add New Event</a>
             <table class="table">
                 <thead class="thead-dark">
                   <tr>

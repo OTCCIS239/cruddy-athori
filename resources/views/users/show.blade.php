@@ -3,34 +3,23 @@
         @include('layouts.nav')
         <div class="container artistsContainer">
             <form>
-                <h4 class="mb-3">Artist Information</h4>
+                <h4 class="mb-3">User Information</h4>
                 <div class="row">
                 <div class="col-md-6 mb-3">
-                    <label for="">Artist Name:</label>
-                    <input type="text" class="form-control" id="" placeholder="" value="SomeArtist"readonly>
+                    <label for="">User Name:</label>
+                    <input type="text" class="form-control" id="" placeholder="" value="Somename"readonly>
                 </div>
                 <div class="col-md-6 mb-3">
-                    <label for="">Misc Info:</label>
-                    <input type="text" class="form-control" id="" placeholder="" value="Something to know"readonly>
+                    <label for="">First Name:</label>
+                    <input type="text" class="form-control" id="" placeholder="" value="John"readonly>
                 </div>
                 </div>
                 <div class="row">
                 <div class="col-md-6 mb-3">
-                    <label for="">Misc Info:</label>
-                    <input type="text" class="form-control" id="" placeholder="" value="Somemore info"readonly>
+                    <label for="">Last Name:</label>
+                    <input type="text" class="form-control" id="" placeholder="" value="Doe"readonly>
                 </div>
-                <div class="col-md-6 mb-3">
-                    <label for="">Number Of Tickets:</label>
-                    <input type="text" class="form-control" id="" placeholder="" value=""readonly>
-                </div>
-                <div class="col-md-6 mb-3">
-                    <label for="">Ticket Type:</label>
-                    <input type="text" class="form-control" id="" placeholder="" value=""readonly>
-                </div>
-                <div class="col-md-6 mb-3">
-                    <label for="">Ticket Type:</label>
-                    <input type="text" class="form-control" id="" placeholder="" value=""readonly>
-                </div>
+                
                 </div>
                 
             </form>

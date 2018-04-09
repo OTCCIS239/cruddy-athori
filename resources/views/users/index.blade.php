@@ -3,6 +3,7 @@
         @include('layouts.nav')
         <div class="container usersContainer">
             <h1>User's Information</h1>
+            <a class="btn btn-primary" href="{{ route('users.create') }}">Add New User</a>
             <table class="table">
                 <thead class="thead-dark">
                   <tr>

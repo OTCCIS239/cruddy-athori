@@ -3,6 +3,7 @@
         @include('layouts.nav')
         <div class="container artistsContainer">
             <h1>Ticket's Information</h1>
+            <a class="btn btn-primary" href="{{ route('tickets.create') }}">Add New ticket</a>
             <table class="table">
                 <thead class="thead-dark">
                   <tr>
