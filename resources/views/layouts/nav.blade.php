@@ -10,6 +10,7 @@
         <a class="nav-item nav-link @if(Route::is('events.*')) active @endif" href="{{ route('events.index') }}">Events</a>
         <a class="nav-item nav-link @if(Route::is('venues.*')) active @endif" href="{{ route('venues.index') }}">Venues</a>
         <a class="nav-item nav-link @if(Route::is('users.*')) active @endif" href="{{ route('users.index') }}">Users</a>
+        <a class="nav-item nav-link @if(Route::is('tickets.*')) active @endif" href="{{ route('tickets.index') }}">Tickets</a>
       </div>
     </div>
   </nav>
