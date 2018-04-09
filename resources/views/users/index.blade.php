@@ -19,7 +19,7 @@
                         <td>ausername</td>
                         <td>John</td>
                         <td>Doe</td>
-                        <td><a href="">View Info</a></td>
+                        <td><a href="{{ route('user') }}">View Info</a></td>
                     </tr>
                 </tbody>
             </table>

@@ -7,11 +7,11 @@
                 <div class="row">
                 <div class="col-md-6 mb-3">
                     <label for="">Artist Name:</label>
-                    <input type="text" class="form-control" id="" placeholder="" value="SomeArtist"readonly>
+                    <input type="text" class="form-control" id="" placeholder="" value="">
                 </div>
                 <div class="col-md-6 mb-3">
                     <label for="">Misc Info:</label>
-                    <input type="text" class="form-control" id="" placeholder="" value="Something to know"readonly>
+                    <input type="text" class="form-control" id="" placeholder="" value="">
                 </div>
                 </div>
                 <div class="row">

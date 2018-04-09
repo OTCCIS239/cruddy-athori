@@ -44,9 +44,10 @@ class UsersController extends Controller
      * @param  \App\Users  $users
      * @return \Illuminate\Http\Response
      */
-    public function show(Users $users)
+    // public function show(Users $users)
+    public function show()
     {
-        //
+        return view('users.show');
     }
 
     /**

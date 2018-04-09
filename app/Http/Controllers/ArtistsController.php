@@ -24,7 +24,7 @@ class ArtistsController extends Controller
      */
     public function create()
     {
-        //
+        return view('artists.create');
     }
 
     /**

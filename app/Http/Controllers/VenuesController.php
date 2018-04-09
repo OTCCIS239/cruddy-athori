@@ -44,9 +44,10 @@ class VenuesController extends Controller
      * @param  \App\Venues  $venues
      * @return \Illuminate\Http\Response
      */
-    public function show(Venues $venues)
+    // public function show(Venues $venues)
+    public function show()
     {
-        //
+        return view('venues.show');
     }
 
     /**

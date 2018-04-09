@@ -19,7 +19,7 @@
                         <td>A venue</td>
                         <td>misc info k</td>
                         <td>more misc info k</td>
-                        <td><a href="">View Info</a></td>
+                        <td><a href="{{ route('venue') }}">View Info</a></td>
                     </tr>
                 </tbody>
             </table>

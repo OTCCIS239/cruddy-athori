@@ -44,9 +44,10 @@ class TicketsController extends Controller
      * @param  \App\Tickets  $tickets
      * @return \Illuminate\Http\Response
      */
-    public function show(Tickets $tickets)
+    // public function show(Tickets $tickets)
+    public function show()
     {
-        //
+        return view('tickets.show');
     }
 
     /**

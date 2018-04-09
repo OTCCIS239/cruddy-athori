@@ -19,7 +19,7 @@
                         <td>Some Country Act</td>
                         <td>Some venue</td>
                         <td>Some Date</td>
-                        <td><a href="">View Info</a></td>
+                        <td><a href="{{ route('event') }}">View Info</a></td>
                     </tr>
                 </tbody>
             </table>

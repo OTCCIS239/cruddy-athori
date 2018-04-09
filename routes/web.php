@@ -31,3 +31,23 @@ Route::resource('tickets', 'TicketsController');
 Route::get('artists/artist', function(){
 
 })->name('artist');
+
+// Route::get('artists/create', function(){
+
+// })->name('create');
+
+Route::get('events/event', function(){
+
+})->name('event');
+
+Route::get('tickets/ticket', function(){
+
+})->name('ticket');
+
+Route::get('users/user', function(){
+
+})->name('user');
+
+Route::get('venues/venue', function(){
+
+})->name('venue');
