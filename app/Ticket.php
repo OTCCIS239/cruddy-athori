@@ -13,7 +13,7 @@ class Ticket extends Model
         'guestName',
         'ticketType',
         'numberOfTickets',
-        'ticketNumber',
+        'ticketnumber',
         'ticket_id'
     ];
 }

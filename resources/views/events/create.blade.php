@@ -29,7 +29,7 @@
                             <input type="text" class="form-control" name="StartTime" id="StartTime" placeholder="" value="{{ @$event ? $event['StartTime'] : '' }}">
                         </div>
                     </div>
-                <button type="submit"></button>
+                <button type="submit">Submit</button>
             </form>
         </div>
         @include('layouts.footer')

@@ -40,7 +40,7 @@ class TicketsController extends Controller
             'guestName'=>'required'
         ]);
 
-        $tickets = Ticket::create($request->all());
+        $ticket = Ticket::create($request->all());
 
         return redirect('/tickets/' . $ticket->id);
     }
@@ -62,7 +62,7 @@ class TicketsController extends Controller
      * @param  \App\Tickets  $tickets
      * @return \Illuminate\Http\Response
      */
-    public function edit(Tickets $tickets)
+    public function edit(Ticket $ticket)
     {
         return view('tickets.edit', compact('ticket'));
     }
@@ -88,7 +88,7 @@ class TicketsController extends Controller
      */
     public function destroy(Ticket $ticket)
     {
-        $event->delete();
+        $ticket->delete();
         return redirect('/tickets');
     }
 }

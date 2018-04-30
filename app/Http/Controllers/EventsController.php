@@ -40,7 +40,7 @@ class EventsController extends Controller
             'EventName'=>'required'
         ]);
 
-        $events = Event::create($request->all());
+        $event = Event::create($request->all());
 
         return redirect('/events/' . $event->id);
     }
