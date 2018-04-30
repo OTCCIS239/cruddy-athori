@@ -51,8 +51,7 @@ class EventsController extends Controller
      * @param  \App\Event  $event
      * @return \Illuminate\Http\Response
      */
-    // public function show(Event $event)
-    public function show()
+    public function show(Event $event)
     {
         return view('events.show', compact('event'));
     }
@@ -65,7 +64,7 @@ class EventsController extends Controller
      */
     public function edit(Event $event)
     {
-        return view('events.edit', compact('events'));
+        return view('events.edit', compact('event'));
     }
 
     /**

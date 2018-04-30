@@ -2,7 +2,8 @@
     @section('content')
         @include('layouts.nav')
         <div class="container artistsContainer">
-            <form action="/events" method="POST">
+            <form action="/events/{{ $event->id }}" method="POST">
+                <input type="hidden" name="_method" value="PATCH">
                 {{ csrf_field() }}
                 <h4 class="mb-3">Event Information</h4>
                 <div class="row">
@@ -29,7 +30,7 @@
                             <input type="text" class="form-control" name="StartTime" id="StartTime" placeholder="" value="{{ @$event ? $event['StartTime'] : '' }}">
                         </div>
                     </div>
-                <button type="submit"></button>
+                    <button type="submit">Submit</button>
             </form>
         </div>
         @include('layouts.footer')

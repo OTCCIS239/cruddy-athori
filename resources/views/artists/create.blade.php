@@ -3,7 +3,7 @@
         @include('layouts.nav')
         <div class="container artistsContainer">
             <form action="/artists" method="POST">
-                {{csrf_field()}}
+                {{ csrf_field() }}
                 <h4 class="mb-3">Artist Information</h4>
                 <div class="row">
                     <div class="col-md-6 mb-3">
