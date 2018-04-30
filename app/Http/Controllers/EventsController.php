@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Events;
+use App\Event;
 use Illuminate\Http\Request;
 
 class EventsController extends Controller
@@ -14,7 +14,8 @@ class EventsController extends Controller
      */
     public function index()
     {
-        return view('events.index');
+        $events = Event::all();
+        return view('events.index', compact('events'));
     }
 
     /**
@@ -35,52 +36,60 @@ class EventsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request,[
+            'EventName'=>'required'
+        ]);
+
+        $events = Event::create($request->all());
+
+        return redirect('/events/' . $event->id);
     }
 
     /**
      * Display the specified resource.
-     *
-     * @param  \App\Events  $events
+     * @param int $id
+     * @param  \App\Event  $event
      * @return \Illuminate\Http\Response
      */
-    // public function show(Events $events)
+    // public function show(Event $event)
     public function show()
     {
-        return view('events.show');
+        return view('events.show', compact('event'));
     }
 
     /**
      * Show the form for editing the specified resource.
-     *
-     * @param  \App\Events  $events
+     * @param int $id
+     * @param  \App\Event  $event
      * @return \Illuminate\Http\Response
      */
-    public function edit(Events $events)
+    public function edit(Event $event)
     {
-        //
+        return view('events.edit', compact('events'));
     }
 
     /**
      * Update the specified resource in storage.
-     *
+     * @param int $id
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Events  $events
+     * @param  \App\Event  $event
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Events $events)
+    public function update(Request $request, Event $event)
     {
-        //
+        $event->update($request->all());
+        return redirect('/events/' . $event->id);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Events  $events
+     * @param  \App\Event  $event
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Events $events)
+    public function destroy(Event $event)
     {
-        //
+        $event->delete();
+        return redirect('/events');
     }
 }
