@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Tickets;
+use App\Ticket;
 use Illuminate\Http\Request;
 
 class TicketsController extends Controller
@@ -14,7 +14,8 @@ class TicketsController extends Controller
      */
     public function index()
     {
-        return view('tickets.index');
+        $tickets = Ticket::all();
+        return view('tickets.index', compact('tickets'));
     }
 
     /**
@@ -35,52 +36,59 @@ class TicketsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request,[
+            'guestName'=>'required'
+        ]);
+
+        $tickets = Ticket::create($request->all());
+
+        return redirect('/tickets/' . $ticket->id);
     }
 
     /**
      * Display the specified resource.
-     *
-     * @param  \App\Tickets  $tickets
+     * @param int $id
+     * @param  \App\Ticket  $ticket
      * @return \Illuminate\Http\Response
      */
-    // public function show(Tickets $tickets)
-    public function show()
+    public function show(Ticket $ticket)
     {
-        return view('tickets.show');
+        return view('tickets.show', compact('ticket'));
     }
 
     /**
      * Show the form for editing the specified resource.
-     *
+     * @param int $id
      * @param  \App\Tickets  $tickets
      * @return \Illuminate\Http\Response
      */
     public function edit(Tickets $tickets)
     {
-        //
+        return view('tickets.edit', compact('ticket'));
     }
 
     /**
      * Update the specified resource in storage.
-     *
+     * @param int $id
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Tickets  $tickets
+     * @param  \App\Ticket  $ticket
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Tickets $tickets)
+    public function update(Request $request, Ticket $ticket)
     {
-        //
+        $ticket->update($request->all());
+        return redirect('/tickets/' . $ticket->id);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Tickets  $tickets
+     * @param  \App\Ticket  $ticket
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Tickets $tickets)
+    public function destroy(Ticket $ticket)
     {
-        //
+        $event->delete();
+        return redirect('/tickets');
     }
 }
