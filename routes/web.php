@@ -28,26 +28,26 @@ Route::resource('users', 'UsersController');
 Route::resource('venues', 'VenuesController');
 Route::resource('tickets', 'TicketsController');
 
-Route::get('artists/artist', function(){
+// Route::get('artists/artist', function(){
 
-})->name('artist');
+// })->name('artist');
 
-// Route::get('artists/create', function(){
+// // Route::get('artists/create', function(){
 
-// })->name('create');
+// // })->name('create');
 
-Route::get('events/event', function(){
+// Route::get('events/event', function(){
 
-})->name('event');
+// })->name('event');
 
-Route::get('tickets/ticket', function(){
+// Route::get('tickets/ticket', function(){
 
-})->name('ticket');
+// })->name('ticket');
 
-Route::get('users/user', function(){
+// Route::get('users/user', function(){
 
-})->name('user');
+// })->name('user');
 
-Route::get('venues/venue', function(){
+// Route::get('venues/venue', function(){
 
-})->name('venue');
+// })->name('venue');

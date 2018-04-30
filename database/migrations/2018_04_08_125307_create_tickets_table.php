@@ -20,7 +20,8 @@ class CreateTicketsTable extends Migration
             $table->time('startTime');
             $table->string('guestName');
             $table->string('ticketType');
-            $table->unsignedInteger('numberOfTickets');
+            $table->integer('numberOfTickets');
+            $table->integer('ticketnumber');
             $table->string('ticket_id');
             $table->timestamps();
         });

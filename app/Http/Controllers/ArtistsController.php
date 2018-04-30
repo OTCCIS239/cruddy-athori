@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Artists;
+use App\Artist;
 use Illuminate\Http\Request;
 
 class ArtistsController extends Controller
@@ -14,7 +14,8 @@ class ArtistsController extends Controller
      */
     public function index()
     {
-        return view('artists.index');
+       $artists = Artist::all();
+        return view('artists.index', compact('artists'));
     }
 
     /**
@@ -35,52 +36,61 @@ class ArtistsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request,[
+            'ArtistName'=>'required'
+        ]);
+
+        $artist = Artist::create($request->all());
+
+        return redirect('/artists/' . $artist->id);
     }
 
     /**
      * Display the specified resource.
-     *
-     * @param  \App\Artists  $artists
+     * @param int $id
+     * @param  \App\Artist  $artist
      * @return \Illuminate\Http\Response
      */
-    //public function show(Artists $artists)
-    public function show()
+    public function show(Artist $artist)
     {
-        return view('artists.show');
+        return view('artists.show', compact('artist'));
     }
 
     /**
      * Show the form for editing the specified resource.
-     *
-     * @param  \App\Artists  $artists
+     * @param int $id
+     * @param  \App\Artist  $artist
      * @return \Illuminate\Http\Response
      */
-    public function edit(Artists $artists)
+    public function edit(Artist $artist)
     {
-        //
+        return view('artists.edit', compact('artist'));
     }
 
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Artists  $artists
+     * @param  int $id
+     * @param  \App\Artist  $artist
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Artists $artists)
+    public function update(Request $request, Artist $artist)
     {
-        //
+        $artist->update($request->all());
+        return redirect('/artists/' . $artist->id);
+        
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Artists  $artists
+     * @param  \App\Artist  $artists
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Artists $artists)
+    public function destroy(Artist $artist)
     {
-        //
+        $artist->delete();
+        return redirect('/artists');
     }
 }
