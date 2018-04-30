@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Venues;
+use App\Venue;
 use Illuminate\Http\Request;
 
 class VenuesController extends Controller
@@ -14,7 +14,8 @@ class VenuesController extends Controller
      */
     public function index()
     {
-        return view('venues.index');
+        $venues = Venue::all();
+        return view('venues.index', compact('venues'));
     }
 
     /**
@@ -35,52 +36,59 @@ class VenuesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request,[
+            'venue_name'=>'required'
+        ]);
+
+        $venue = Venue::create($request->all());
+
+        return redirect('/venues/' . $venue->id);
     }
 
     /**
      * Display the specified resource.
-     *
-     * @param  \App\Venues  $venues
+     * @param int $id
+     * @param  \App\Venue  $venue
      * @return \Illuminate\Http\Response
      */
-    // public function show(Venues $venues)
-    public function show()
+    public function show(Venue $venue)
     {
-        return view('venues.show');
+        return view('venues.show', compact('venue'));
     }
 
     /**
      * Show the form for editing the specified resource.
-     *
-     * @param  \App\Venues  $venues
+     * @param int $id
+     * @param  \App\Venue  $venue
      * @return \Illuminate\Http\Response
      */
-    public function edit(Venues $venues)
+    public function edit(Venue $venue)
     {
-        //
+        return view('venues.edit', compact('venue'));
     }
 
     /**
      * Update the specified resource in storage.
-     *
+     * @param int $id
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Venues  $venues
+     * @param  \App\Venue  $venue
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Venues $venues)
+    public function update(Request $request, Venue $venue)
     {
-        //
+        $venue->update($request->all());
+        return redirect('/venues/' . $venue->id);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Venues  $venues
+     * @param  \App\Venue  $venues
      * @return \Illuminate\Http\Response
      */
     public function destroy(Venues $venues)
     {
-        //
+        $venue->delete();
+        return redirect('/venues');
     }
 }
