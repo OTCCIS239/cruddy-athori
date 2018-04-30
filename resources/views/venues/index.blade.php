@@ -9,19 +9,31 @@
                   <tr>
                     <th scope="col">Venue ID</th>
                     <th scope="col">Venue Name</th>
-                    <th scope="col">misc info</th>
-                    <th scope="col">misc info2</th>
+                    <th scope="col">Venue City</th>
+                    <th scope="col">Capacity</th>
+                    <th></th>
+                    <th></th>
                     <th></th>
                   </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">1</th>
-                        <td>A venue</td>
-                        <td>misc info k</td>
-                        <td>more misc info k</td>
-                        <td><a href="{{ route('venue') }}">View Info</a></td>
-                    </tr>
+                    @foreach($venues as $venue)
+                        <tr>
+                            <th scope="row" width="15%">{{ $venue->id }}</th>
+                            <td width="20%">{{ $venue->venue_name }}</td>
+                            <td width="20%">{{ $venue->city }}</td>
+                            <td width="20%">{{ $venue->capacity }}</td>
+                            <td width="15%"><a class="btn btn-primary" href="/venues/{{ $venue->id }}/edit">Edit</a></td>
+                            <td width="15%"><a class="btn btn-success" href="/venues/{{ $venue->id }}">View Info</a></td>
+                            <td width="15%">
+                                <form action="/venues/{{ $venue->id }}" method="POST">
+                                    {{ csrf_field() }}
+                                    <input type="hidden" name="_method" value="DELETE">
+                                    <button type="submit" class="btn btn-danger">DELETE</button>
+                                <form>
+                            </td>
+                        </tr>
+                     @endforeach
                 </tbody>
             </table>
         </div>

@@ -2,7 +2,8 @@
     @section('content')
         @include('layouts.nav')
         <div class="container artistsContainer">
-            <form action="/venues" method="POST">
+            <form action="/venues{{ $venue->id }}" method="POST">
+                <input type="hidden" name="_method" value="PATCH">
                 {{ csrf_field() }}
                 <h4 class="mb-3">Venue Information</h4>
                 <div class="row">

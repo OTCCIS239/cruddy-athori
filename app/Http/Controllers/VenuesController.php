@@ -86,7 +86,7 @@ class VenuesController extends Controller
      * @param  \App\Venue  $venues
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Venues $venues)
+    public function destroy(Venue $venue)
     {
         $venue->delete();
         return redirect('/venues');
